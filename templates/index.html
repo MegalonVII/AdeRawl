@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AdeRawl</title>
+    <style>
+        body {
+            background-color: #0a0a3d;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+  
+        h1 {
+            font-family: 'Segoe Script';
+            font-size: 36px;
+            margin-top: 20px;
+        }
+  
+        h1 span.ade {
+            color: #000;
+            background-color: white;
+        }
+  
+        h1 span.rawl {
+            color: #fff;
+            background-color: red;
+        }
+
+        h4 {
+            color: #d8d8fa;
+            font-family: Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+      
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #D8D8FA;
+            font-family: Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            margin: 5px 0;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .form-group input[type="text"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="ade">Ade</span><span class="rawl">Rawl</span></h1>
+    <h4>AdeRawl will redirect you to the raw video URL that YouTube has in store for the very video you want to watch! Ad-free and ad-blocker-popup-free!</h4>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <input type="text" id="youtube_url" name="youtube_url" required>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
