@@ -1,5 +1,5 @@
 # AdeRawl
-HTML5 Viewer for YouTube videos to bypass ads and that pesky popup nowadays if you use an adblocker. Deployed [here](https://aderawl.onrender.com/), but the requirements and instructions listed below are for if you want to deploy the application locally.
+HTML5 Viewer for YouTube videos to bypass ads and that pesky popup nowadays if you use an adblocker. Written in Flask framework. Deployed [here](https://aderawl.onrender.com/), but the requirements and instructions listed below are for if you want to deploy the application locally.
 
 # Requirements
 1. [Python](https://www.python.org/downloads/) (install the latest version)
