@@ -18,7 +18,7 @@ def get_link():
       direct_link = get_direct_link(youtube_url)
       return redirect(direct_link)
   else:
-      return render_template('docs/index.html', error_message='Invalid YouTube URL')
+      return render_template('index.html', error_message='Invalid YouTube URL')
 
 def is_valid_url(url):
     regex = r"(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([a-zA-Z0-9_-]{11})"
