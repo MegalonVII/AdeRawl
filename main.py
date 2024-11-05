@@ -34,7 +34,7 @@ def get_direct_link(youtube_url):
             'format': 'best',
             'quiet': True,
             'noplaylist': True,
-            'username': 'oauth2',
+            'username': 'oauth',
             'password': ''
         }
         try:
