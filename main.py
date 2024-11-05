@@ -33,12 +33,14 @@ def get_direct_link(youtube_url):
         ydl_opts = {
             'format': 'best',
             'quiet': True,
-            'noplaylist': True
+            'noplaylist': True,
+            'username': 'oauth',
+            'password': ''
         }
         try:
-            ydl_opts['cookiefile'] = '/etc/secrets/cookies.txt/'
+            ydl_opts['cookiefile'] = '/etc/secrets/cookies.txt'
         except:
-            pass
+            ydl_opts['cookiefile'] = 'cookies.txt'
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(youtube_url, download=False)
             direct_link = info_dict.get('url')
