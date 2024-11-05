@@ -33,9 +33,7 @@ def get_direct_link(youtube_url):
         ydl_opts = {
             'format': 'best',
             'quiet': True,
-            'noplaylist': True,
-            'username': 'oauth',
-            'password': ''
+            'noplaylist': True
         }
         try:
             ydl_opts['cookiefile'] = '/etc/secrets/cookies.txt/'
