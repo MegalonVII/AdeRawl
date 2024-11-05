@@ -1,4 +1,5 @@
 # type: ignore
+import platform
 import re
 import yt_dlp
 from flask import Flask, render_template, request, redirect
@@ -35,6 +36,8 @@ def get_direct_link(youtube_url):
             'quiet': True,
             'noplaylist': True
         }
+        if platform.system() != 'Darwin':
+            ydl_opts['cookiefile'] = '/etc/secrets/cookies.txt/'
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(youtube_url, download=False)
             direct_link = info_dict.get('url')
